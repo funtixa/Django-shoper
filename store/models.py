@@ -1,3 +1,5 @@
+from distutils.command.upload import upload
+from operator import truediv
 from pyexpat import model
 import re
 from unittest.util import _MAX_LENGTH
@@ -21,6 +23,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=50)
     description = models.TextField(blank=True)
     price = models.IntegerField()
+    image = models.ImageField(upload_to='uploads/product_images/',blank=True, null=True)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
 
