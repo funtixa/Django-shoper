@@ -9,8 +9,10 @@ from core.views import frontPage,about
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/',about,name='about'),
-    path('',frontPage,name='frontpage'),
+    
+    path('', include('userprofile.urls')),
     path('', include('store.urls')),
+    path('',frontPage,name='frontpage'),
 
 
     
