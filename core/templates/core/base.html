@@ -18,7 +18,12 @@
 
         <div class="menu flex space-x-4">
           {% menu %}
-            <a href="{% url 'about' %}"class="text-white">About</a>
+          {% if request.user.is_authenticated %}
+          <a href="{% url 'myaccount' %}"class="text-white">My account</a>
+          {% endif %}
+          {% if not request.user.is_authenticated %}
+          <a href="{% url 'login' %}"class="text-white">LogIn</a>
+          {% endif %}
         </div>
     </nav>
     <div class="max-w-4xl mx-auto items-center justify-between">
