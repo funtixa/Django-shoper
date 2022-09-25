@@ -4,7 +4,7 @@ from django.shortcuts import render
 from store.models import Product
 
 def frontPage(request):
-    products = Product.objects.all()[0:6]
+    products = Product.objects.filter(status=Product.ACTIVE)[0:20]
     context = {
         'products' : products
     }
