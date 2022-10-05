@@ -29,6 +29,9 @@ ALLOWED_HOSTS = ['*']
 LOGOUT_REDIRECT_URL = 'frontpage'
 LOGIN_REDIRECT_URL = 'myaccount'
 
+CART_SESSION_ID = 'cart'
+SESSION_COOKIE_AGE = 86400
+
 
 # Application definition
 
