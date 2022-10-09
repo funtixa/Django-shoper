@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['*']
 LOGOUT_REDIRECT_URL = 'frontpage'
 LOGIN_REDIRECT_URL = 'myaccount'
 
+LOGIN_URL = 'login'
 CART_SESSION_ID = 'cart'
 SESSION_COOKIE_AGE = 86400
 
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'store.context_processors.cart',
             ],
         },
     },
